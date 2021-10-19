@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Jul 29 10:55:11 2020
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : buks
+Top-level Entity Name : buks
+Family : MAX 10
+Total logic elements : 23,635
+    Total combinational functions : 16,842
+    Dedicated logic registers : 14,804
+Total registers : 14804
+Total pins : 43
+Total virtual pins : 0
+Total memory bits : 122,880
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0

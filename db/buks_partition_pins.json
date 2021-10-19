@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "eth_phy_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "tx_en_a",
+					"strict" : false
+				},
+				{
+					"name" : "tx_en_b",
+					"strict" : false
+				},
+				{
+					"name" : "txd_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "txd_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AD_CNV",
+					"strict" : false
+				},
+				{
+					"name" : "AD_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AD_CS1",
+					"strict" : false
+				},
+				{
+					"name" : "AD_CS2",
+					"strict" : false
+				},
+				{
+					"name" : "tx_clk_a",
+					"strict" : false
+				},
+				{
+					"name" : "tx_clk_b",
+					"strict" : false
+				},
+				{
+					"name" : "IP_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IP_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IP_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IP_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IP_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AD_FD",
+					"strict" : false
+				},
+				{
+					"name" : "rx_clk_b",
+					"strict" : false
+				},
+				{
+					"name" : "rx_clk_a",
+					"strict" : false
+				},
+				{
+					"name" : "rx_dv_b",
+					"strict" : false
+				},
+				{
+					"name" : "rx_dv_a",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rxd_a[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

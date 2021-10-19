@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed Jul 29 10:58:47 2020
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : buks
+Top-level Entity Name : buks
+Family : MAX 10
+Device : 10M25DAF256I7G
+Timing Models : Final
+Total logic elements : 21,325 / 24,960 ( 85 % )
+    Total combinational functions : 16,843 / 24,960 ( 67 % )
+    Dedicated logic registers : 14,804 / 24,960 ( 59 % )
+Total registers : 14804
+Total pins : 43 / 178 ( 24 % )
+Total virtual pins : 0
+Total memory bits : 122,880 / 691,200 ( 18 % )
+Embedded Multiplier 9-bit elements : 0 / 110 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

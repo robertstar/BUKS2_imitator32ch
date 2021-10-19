@@ -1,0 +1,139 @@
+
+State Machine - |buks|alg_rst
+Name alg_rst.0001 
+alg_rst.0000 0 
+alg_rst.0001 1 
+
+State Machine - |buks|adc_state
+Name adc_state.0001 
+adc_state.0000 0 
+adc_state.0001 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_tx_state
+Name eth2_tx_state.tx_IGP eth2_tx_state.tx_ICMP eth2_tx_state.tx_ARP eth2_tx_state.tx_IDLE 
+eth2_tx_state.tx_IDLE 0 0 0 0 
+eth2_tx_state.tx_ARP 0 0 1 1 
+eth2_tx_state.tx_ICMP 0 1 0 1 
+eth2_tx_state.tx_IGP 1 0 0 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_tx_pre
+Name eth2_tx_pre.0000 eth2_tx_pre.0010 eth2_tx_pre.0001 
+eth2_tx_pre.0000 0 0 0 
+eth2_tx_pre.0001 1 0 1 
+eth2_tx_pre.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_to_eth2_pre_icmp
+Name eth1_to_eth2_pre_icmp.0000 eth1_to_eth2_pre_icmp.0010 eth1_to_eth2_pre_icmp.0001 
+eth1_to_eth2_pre_icmp.0000 0 0 0 
+eth1_to_eth2_pre_icmp.0001 1 0 1 
+eth1_to_eth2_pre_icmp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_to_eth2_pre_arp
+Name eth1_to_eth2_pre_arp.0000 eth1_to_eth2_pre_arp.0010 eth1_to_eth2_pre_arp.0001 
+eth1_to_eth2_pre_arp.0000 0 0 0 
+eth1_to_eth2_pre_arp.0001 1 0 1 
+eth1_to_eth2_pre_arp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_rx_state
+Name eth2_rx_state.rx_DELAY eth2_rx_state.rx_UDP_FCS eth2_rx_state.rx_UDP_Data eth2_rx_state.rx_UDP_layer eth2_rx_state.rx_ICMP_FCS eth2_rx_state.rx_ICMP_layer eth2_rx_state.rx_ARP_FCS eth2_rx_state.rx_ARP_TRL eth2_rx_state.rx_ARP_layer eth2_rx_state.rx_IPv4_layer eth2_rx_state.rx_ETH_layer eth2_rx_state.rx_PREAMBULE eth2_rx_state.rx_IDLE 
+eth2_rx_state.rx_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 
+eth2_rx_state.rx_PREAMBULE 0 0 0 0 0 0 0 0 0 0 0 1 1 
+eth2_rx_state.rx_ETH_layer 0 0 0 0 0 0 0 0 0 0 1 0 1 
+eth2_rx_state.rx_IPv4_layer 0 0 0 0 0 0 0 0 0 1 0 0 1 
+eth2_rx_state.rx_ARP_layer 0 0 0 0 0 0 0 0 1 0 0 0 1 
+eth2_rx_state.rx_ARP_TRL 0 0 0 0 0 0 0 1 0 0 0 0 1 
+eth2_rx_state.rx_ARP_FCS 0 0 0 0 0 0 1 0 0 0 0 0 1 
+eth2_rx_state.rx_ICMP_layer 0 0 0 0 0 1 0 0 0 0 0 0 1 
+eth2_rx_state.rx_ICMP_FCS 0 0 0 0 1 0 0 0 0 0 0 0 1 
+eth2_rx_state.rx_UDP_layer 0 0 0 1 0 0 0 0 0 0 0 0 1 
+eth2_rx_state.rx_UDP_Data 0 0 1 0 0 0 0 0 0 0 0 0 1 
+eth2_rx_state.rx_UDP_FCS 0 1 0 0 0 0 0 0 0 0 0 0 1 
+eth2_rx_state.rx_DELAY 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_rx_alg_state
+Name eth2_rx_alg_state.00000001 
+eth2_rx_alg_state.00000000 0 
+eth2_rx_alg_state.00000001 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_tx_pre
+Name eth1_tx_pre.0000 eth1_tx_pre.0010 eth1_tx_pre.0001 
+eth1_tx_pre.0000 0 0 0 
+eth1_tx_pre.0001 1 0 1 
+eth1_tx_pre.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_tx_state
+Name eth1_tx_state.tx_ADC2 eth1_tx_state.tx_UDP_from_eth2 eth1_tx_state.tx_ICMP_from_eth2 eth1_tx_state.tx_ARP_from_eth2 eth1_tx_state.tx_IGP eth1_tx_state.tx_FCS eth1_tx_state.tx_ICMP eth1_tx_state.tx_ARP eth1_tx_state.tx_ADC eth1_tx_state.tx_IDLE 
+eth1_tx_state.tx_IDLE 0 0 0 0 0 0 0 0 0 0 
+eth1_tx_state.tx_ADC 0 0 0 0 0 0 0 0 1 1 
+eth1_tx_state.tx_ARP 0 0 0 0 0 0 0 1 0 1 
+eth1_tx_state.tx_ICMP 0 0 0 0 0 0 1 0 0 1 
+eth1_tx_state.tx_FCS 0 0 0 0 0 1 0 0 0 1 
+eth1_tx_state.tx_IGP 0 0 0 0 1 0 0 0 0 1 
+eth1_tx_state.tx_ARP_from_eth2 0 0 0 1 0 0 0 0 0 1 
+eth1_tx_state.tx_ICMP_from_eth2 0 0 1 0 0 0 0 0 0 1 
+eth1_tx_state.tx_UDP_from_eth2 0 1 0 0 0 0 0 0 0 1 
+eth1_tx_state.tx_ADC2 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_to_eth1_pre_udp
+Name eth2_to_eth1_pre_udp.0000 eth2_to_eth1_pre_udp.0010 eth2_to_eth1_pre_udp.0001 
+eth2_to_eth1_pre_udp.0000 0 0 0 
+eth2_to_eth1_pre_udp.0001 1 0 1 
+eth2_to_eth1_pre_udp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_to_eth1_pre_icmp
+Name eth2_to_eth1_pre_icmp.0000 eth2_to_eth1_pre_icmp.0010 eth2_to_eth1_pre_icmp.0001 
+eth2_to_eth1_pre_icmp.0000 0 0 0 
+eth2_to_eth1_pre_icmp.0001 1 0 1 
+eth2_to_eth1_pre_icmp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth2_to_eth1_pre_arp
+Name eth2_to_eth1_pre_arp.0000 eth2_to_eth1_pre_arp.0010 eth2_to_eth1_pre_arp.0001 
+eth2_to_eth1_pre_arp.0000 0 0 0 
+eth2_to_eth1_pre_arp.0001 1 0 1 
+eth2_to_eth1_pre_arp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_pre_icmp
+Name eth1_pre_icmp.0011 eth1_pre_icmp.0010 eth1_pre_icmp.0001 eth1_pre_icmp.0000 eth1_pre_icmp.0100 
+eth1_pre_icmp.0000 0 0 0 0 0 
+eth1_pre_icmp.0001 0 0 1 1 0 
+eth1_pre_icmp.0010 0 1 0 1 0 
+eth1_pre_icmp.0011 1 0 0 1 0 
+eth1_pre_icmp.0100 0 0 0 1 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_pre_arp
+Name eth1_pre_arp.0000 eth1_pre_arp.0010 eth1_pre_arp.0001 
+eth1_pre_arp.0000 0 0 0 
+eth1_pre_arp.0001 1 0 1 
+eth1_pre_arp.0010 1 1 0 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_rx_state
+Name eth1_rx_state.rx_DELAY eth1_rx_state.rx_UDP_Data eth1_rx_state.rx_UDP_layer eth1_rx_state.rx_ICMP_FCS eth1_rx_state.rx_ICMP_layer eth1_rx_state.rx_ARP_FCS eth1_rx_state.rx_ARP_TRL eth1_rx_state.rx_ARP_layer eth1_rx_state.rx_IPv4_layer eth1_rx_state.rx_ETH_layer eth1_rx_state.rx_PREAMBULE eth1_rx_state.rx_IDLE 
+eth1_rx_state.rx_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+eth1_rx_state.rx_PREAMBULE 0 0 0 0 0 0 0 0 0 0 1 1 
+eth1_rx_state.rx_ETH_layer 0 0 0 0 0 0 0 0 0 1 0 1 
+eth1_rx_state.rx_IPv4_layer 0 0 0 0 0 0 0 0 1 0 0 1 
+eth1_rx_state.rx_ARP_layer 0 0 0 0 0 0 0 1 0 0 0 1 
+eth1_rx_state.rx_ARP_TRL 0 0 0 0 0 0 1 0 0 0 0 1 
+eth1_rx_state.rx_ARP_FCS 0 0 0 0 0 1 0 0 0 0 0 1 
+eth1_rx_state.rx_ICMP_layer 0 0 0 0 1 0 0 0 0 0 0 1 
+eth1_rx_state.rx_ICMP_FCS 0 0 0 1 0 0 0 0 0 0 0 1 
+eth1_rx_state.rx_UDP_layer 0 0 1 0 0 0 0 0 0 0 0 1 
+eth1_rx_state.rx_UDP_Data 0 1 0 0 0 0 0 0 0 0 0 1 
+eth1_rx_state.rx_DELAY 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |buks|double_mac:double_mac_inst|eth1_rx_alg_state
+Name eth1_rx_alg_state.00000001 
+eth1_rx_alg_state.00000000 0 
+eth1_rx_alg_state.00000001 1 
+
+State Machine - |buks|ad7606:adc1|state
+Name state.0111 state.0110 state.0101 state.0100 state.0011 state.0010 state.0001 state.0000 state.1000 
+state.0000 0 0 0 0 0 0 0 0 0 
+state.0001 0 0 0 0 0 0 1 1 0 
+state.0010 0 0 0 0 0 1 0 1 0 
+state.0011 0 0 0 0 1 0 0 1 0 
+state.0100 0 0 0 1 0 0 0 1 0 
+state.0101 0 0 1 0 0 0 0 1 0 
+state.0110 0 1 0 0 0 0 0 1 0 
+state.0111 1 0 0 0 0 0 0 1 0 
+state.1000 0 0 0 0 0 0 0 1 1 
